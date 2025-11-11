@@ -1,0 +1,99 @@
+:root {
+	--pink: #ec4899;
+	--pink-hover: #db2777;
+	--gray-light: #f9fafb;
+	--gray-mid: #6b7280;
+	--gray-dark: #1f2937;
+	--white: #ffffff;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+	background: linear-gradient(to bottom, var(--gray-light), var(--white));
+	color: var(--gray-dark);
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+img {
+	width: 110px;
+	height: 110px;
+	margin-bottom: 20px;
+	animation: pulse 2s infinite;
+	filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.1));
+}
+
+@keyframes pulse {
+	0%, 100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+	50% {
+		opacity: 0.85;
+		transform: scale(1.05);
+	}
+}
+
+h1 {
+	font-size: 2.2rem;
+	margin-bottom: 0.5rem;
+}
+
+h1 span {
+	color: var(--pink);
+}
+
+p {
+	color: var(--gray-mid);
+	max-width: 400px;
+	margin: 0 auto 2rem;
+}
+
+.counter {
+	font-size: 1.1rem;
+	margin-bottom: 1rem;
+}
+
+button {
+	cursor: pointer;
+	padding: 0.6rem 1.2rem;
+	border: none;
+	border-radius: 0.5rem;
+	font-size: 1rem;
+	transition: background 0.2s, transform 0.2s;
+}
+
+button:hover {
+	transform: translateY(-2px);
+}
+
+button.increment {
+	background: var(--pink);
+	color: var(--white);
+}
+
+button.increment:hover {
+	background: var(--pink-hover);
+}
+
+button.reset {
+	background: #e5e7eb;
+	color: var(--gray-dark);
+	margin-left: 0.5rem;
+}
+
+button.reset:hover {
+	background: #d1d5db;
+}
+
+footer {
+	margin-top: 3rem;
+	font-size: 0.85rem;
+	color: var(--gray-mid);
+}
