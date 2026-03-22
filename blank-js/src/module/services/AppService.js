@@ -1,4 +1,4 @@
-import { composeService } from '@gaman/core';
+import { composeService } from 'gaman/compose';
 
 export const AppService = composeService(() => ({
 	WelcomeMessage() {

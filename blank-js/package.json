@@ -1,19 +1,19 @@
 {
-  "name": "blank-ts",
-  "version": "0.0.1",
-  "main": "dist/index.js",
-  "type": "module",
-  "scripts": {
-    "dev": "gaman dev",
-    "build": "gaman build",
-    "start": "gaman start"
-  },
-  "keywords": [],
-  "author": "",
-  "description": "",
-  "dependencies": {
-    "@gaman/cli": "^1.2.10",
-    "@gaman/common": "^1.2.10",
-    "@gaman/core": "^1.2.10"
-  }
+	"name": "blank-js",
+	"module": "src/index.js",
+	"type": "module",
+	"private": true,
+	"scripts": {
+		"dev": "bun --watch src/index.js",
+		"build": "bun build --outfile=./dist/server.js ./src/index.js --external bun --production",
+		"start": "bun dist/server.js"
+	},
+	"devDependencies": {
+		"@types/bun": "latest",
+		"typescript": "^5"
+	},
+	"peerDependencies": {},
+	"dependencies": {
+		"gaman": "^2.0.2"
+	}
 }

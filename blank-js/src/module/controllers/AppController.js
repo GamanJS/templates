@@ -18,11 +18,11 @@
  * ==========================================================================
  */
 
-import { composeController } from '@gaman/core';
+import { composeController } from 'gaman/compose';
 import { AppService } from '../services/AppService';
 
 export default composeController((appService = AppService()) => ({
 	HelloWorld(ctx) {
-		return Res.json({ message: appService.WelcomeMessage() });
+		return Res.message(appService.WelcomeMessage());
 	},
 }));
