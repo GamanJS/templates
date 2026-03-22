@@ -1,9 +1,7 @@
-import { composeService } from '@gaman/core';
+import { composeService } from 'gaman/compose';
 
-export const AppService = composeService(() => ({
+export default composeService(() => ({
 	WelcomeMessage() {
 		return '❤️ Welcome to GamanJS';
 	},
 }));
-
-export type AppServiceType = ReturnType<typeof AppService>;
