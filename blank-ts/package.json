@@ -11,10 +11,10 @@
 	"type": "module",
 	"scripts": {
 		"dev": "bun --watch src/index.ts",
-    "build": "bun build --outfile=./dist/server.js ./src/index.ts --external bun --production",
-    "start": "bun dist/server.js"
+		"build": "bun build --outfile=./dist/server.js ./src/index.ts --external bun --production",
+		"start": "bun dist/server.js"
 	},
 	"dependencies": {
-		"gaman": "^2.0.2"
+		"gaman": "^2.1.0"
 	}
 }

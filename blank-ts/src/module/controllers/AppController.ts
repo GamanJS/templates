@@ -25,7 +25,9 @@ import type { RT } from 'gaman/types';
 export default composeController(
 	(appService: RT<typeof AppService> = AppService()) => ({
 		HelloWorld(ctx) {
-			return Res.message(appService.WelcomeMessage());
+			return ctx.send({
+				message: appService.WelcomeMessage()
+			}).ok();
 		},
 	}),
 );
