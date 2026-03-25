@@ -23,6 +23,8 @@ import { AppService } from '../services/AppService';
 
 export default composeController((appService = AppService()) => ({
 	HelloWorld(ctx) {
-		return Res.message(appService.WelcomeMessage());
+		return ctx.send({
+			message: appService.WelcomeMessage(),
+		});
 	},
 }));
