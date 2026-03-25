@@ -25,6 +25,6 @@ export default composeController((appService = AppService()) => ({
 	HelloWorld(ctx) {
 		return ctx.send({
 			message: appService.WelcomeMessage(),
-		});
+		}).ok();
 	},
 }));
