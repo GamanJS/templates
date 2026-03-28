@@ -11,14 +11,22 @@
  *    r.get('/', [AppController, 'HelloWorld']);
  *
  * For advanced usage, see the documentation:
- * 		https://gaman.7togk.id/docs/overview/routing/
+ * 		https://gamanjs.github.io/docs/overview/routing/
  *
  * ==========================================================================
  */
 
 import { composeRouter } from 'gaman/compose';
-import AppController from './module/controllers/AppController';
+import AppController from './controllers/AppController';
+import { AppService } from './services/AppService';
 
 export default composeRouter((r) => {
-	r.get('/', [AppController, 'HelloWorld']);
+	/**
+	 * * Inject Service to Controllers
+	 */
+	r.mountService({
+		appService: AppService(),
+	});
+
+	r.get('/', [AppController, 'render']);
 });

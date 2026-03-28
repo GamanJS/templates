@@ -13,18 +13,22 @@
  *    }
  *
  * For more details, visit:
- * 		https://gaman.7togk.id/docs/overview/controllers/
+ * 		https://gamanjs.github.io/docs/overview/controllers/
  *
  * ==========================================================================
  */
 
 import { composeController } from 'gaman/compose';
-import { AppService } from '../services/AppService';
+export default composeController(({ appService }) => {
+	/**
+	 * TODO: your private logic in here
+	 */
 
-export default composeController((appService = AppService()) => ({
-	HelloWorld(ctx) {
-		return ctx.send({
-			message: appService.WelcomeMessage(),
-		}).ok();
-	},
-}));
+	return {
+		render(ctx) {
+			return ctx.send({
+				message: appService.WelcomeMessage(),
+			});
+		},
+	};
+});

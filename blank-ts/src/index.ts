@@ -12,16 +12,16 @@
  *    http://localhost:3431
  *
  * For the full documentation and more awesome features, visit:
- *    https://gaman.7togk.id/docs/
+ *    https://gamanjs.github.io/docs/
  *
  * ==========================================================================
  */
 
 import { defineBootstrap } from 'gaman';
-import router from './router';
+import AppRouter from './modules/app/AppRouter';
 
 defineBootstrap(async (app) => {
-	app.mount(router); // ? register app router
+	app.mount(AppRouter); // ? register router module
 	
 	app.mountServer({ http: 3431 });
 });
