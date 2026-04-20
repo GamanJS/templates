@@ -10,11 +10,12 @@
 	"private": true,
 	"type": "module",
 	"scripts": {
-		"dev": "bun --watch src/index.ts",
+		"dev": "KAME_CLI=true bun --watch src/index.ts",
 		"build": "bun build --outfile=./dist/server.js ./src/index.ts --external bun --production",
 		"start": "bun dist/server.js"
 	},
 	"dependencies": {
-		"gaman": "^2.1.1"
+		"@gaman/kame": "^0.1.0",
+		"gaman": "^2.1.4"
 	}
 }

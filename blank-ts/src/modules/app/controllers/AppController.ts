@@ -32,7 +32,7 @@ export default composeController(({ appService }: Deps) => {
 
 	return {
 		render(ctx) {
-			return ctx.send({
+			return Res.json({
 				message: appService.WelcomeMessage(),
 			});
 		},
