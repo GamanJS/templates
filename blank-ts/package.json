@@ -15,7 +15,8 @@
 		"start": "bun dist/server.js"
 	},
 	"dependencies": {
-		"@gaman/kame": "^0.1.0",
-		"gaman": "^2.1.4"
+		"@gaman/db": "^0.1.0",
+		"@gaman/kame": "0.1.2",
+		"gaman": "2.1.5"
 	}
 }

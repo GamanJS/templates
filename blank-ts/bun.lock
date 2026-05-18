@@ -5,8 +5,9 @@
     "": {
       "name": "blank-ts",
       "dependencies": {
-        "@gaman/kame": "^0.1.0",
-        "gaman": "^2.1.4",
+        "@gaman/db": "^0.1.0",
+        "@gaman/kame": "0.1.2",
+        "gaman": "2.1.5",
       },
       "devDependencies": {
         "@types/bun": "latest",
@@ -17,7 +18,9 @@
     },
   },
   "packages": {
-    "@gaman/kame": ["@gaman/kame@0.1.0", "", {}, "sha512-057ut+7hAtCFMMrsFy53OwJU5EHRag5tJwJbmO8jZuwJt2ah9GporPCFgxQ8GWvhoysdKaXxZpQzzjSEC9/0hw=="],
+    "@gaman/db": ["@gaman/db@0.1.0", "", { "peerDependencies": { "kysely": ">=0.28.16", "kysely-bun-sqlite": ">=0.4.0" } }, "sha512-OX/aA1EUp5+tLePino4AvWBGtvB+oFNLDkYO7C0CbdA01iMExwv9Dev691CFKuzC2DS1ouTDTQi9Xp+DRYHAdw=="],
+
+    "@gaman/kame": ["@gaman/kame@0.1.2", "", {}, "sha512-mq1JBG0Mx8COi8xbLap971hh0Zf/GRqnJ1SmtwefFg9PqqpapHUTDDtqKs+juDumWlj1Tsdq6daJ0i9HBytNpA=="],
 
     "@gaman/michi": ["@gaman/michi@0.1.3", "", {}, "sha512-vNkpTEfUa9F8KkpU1OwuY8mKEYmFcpILirsAD7S31IiEThx9inADI/ASO612miX1K6oGWOTqbNXAO09j5I1Hug=="],
 
@@ -27,7 +30,11 @@
 
     "bun-types": ["bun-types@1.3.11", "", { "dependencies": { "@types/node": "*" } }, "sha512-1KGPpoxQWl9f6wcZh57LvrPIInQMn2TQ7jsgxqpRzg+l0QPOFvJVH7HmvHo/AiPgwXy+/Thf6Ov3EdVn1vOabg=="],
 
-    "gaman": ["gaman@2.1.4", "", { "peerDependencies": { "@gaman/michi": "^0.1.3" } }, "sha512-4MtP5GDHQHz/ldBz2XaRIP6jHi0+luWYzP3O1+VIC8sWbceGoA47k5U5BIdCmPE6n3d3n6+CoFWBirO+PGATHA=="],
+    "gaman": ["gaman@2.1.5", "", { "peerDependencies": { "@gaman/michi": "^0.1.3" } }, "sha512-QbANiPfQtxqnQyaD+I90SoHubQFzv+VSYwET4+oGiQDD4PAGHKj3o7oGje3Cvto4UB5YzmO87w9Nw8jfAmwBbw=="],
+
+    "kysely": ["kysely@0.29.2", "", {}, "sha512-s6WVJyEZrbm6jhBpiKHsGHyePMrVQKJ85wZCFCr9W4QHv6WTjWIrdvTmO9hDEA3bNK0xkrE2DqrHsXMLWuZpQg=="],
+
+    "kysely-bun-sqlite": ["kysely-bun-sqlite@0.4.0", "", { "dependencies": { "bun-types": "^1.1.31" }, "peerDependencies": { "kysely": "^0.28.2" } }, "sha512-2EkQE5sT4ewiw7IWfJsAkpxJ/QPVKXKO5sRYI/xjjJIJlECuOdtG+ssYM0twZJySrdrmuildNPFYVreyu1EdZg=="],
 
     "typescript": ["typescript@5.9.3", "", { "bin": { "tsc": "bin/tsc", "tsserver": "bin/tsserver" } }, "sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw=="],
 
